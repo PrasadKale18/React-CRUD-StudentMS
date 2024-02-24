@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "name": "Prasad Kale",
+      "email": "prasadkale932@gmail.com",
+      "mobilenumber": "8767880334",
+      "course": "Computer Engineering",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

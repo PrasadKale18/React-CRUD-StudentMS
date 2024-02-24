@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbars from './layout/Navbars';
+import Home from './pages/Home';
+import AddStudents from './students/AddStudents'
+import EditStudents from './students/EditStudents';
+import {BrowserRouter as Router,Route, Routes} from "react-router-dom"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+      <Navbars />
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/addstudents' exact element={<AddStudents />} />
+        <Route path='/editstudent/:id' exact element={<EditStudents />} />
+      </Routes>
+      </Router>
     </div>
   );
 }
